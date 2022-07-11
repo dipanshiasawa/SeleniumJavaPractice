@@ -26,7 +26,10 @@ public class ActionsDemo {
 		
 		
 		//Moves to specific element
-		a.moveToElement(move).build().perform();
+		a.moveToElement(move).contextClick().build().perform();
+		
+		
+		//Drag and Drop
 		
 		
 	}
