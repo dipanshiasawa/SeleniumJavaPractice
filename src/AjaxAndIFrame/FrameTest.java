@@ -12,10 +12,12 @@ public class FrameTest {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://jqueryui.com/droppable/");
+		//By index
+		System.out.println(driver.findElements(By.tagName("iframe")).size());
+		driver.switchTo().frame(0);
+		//By WebElement
+//		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe.demo-frame")));
 		
-		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe.demo-frame")));
-		
-		driver.findElement(By.id("draggable")).click();
 		Actions a = new Actions(driver);
 		a.dragAndDrop(driver.findElement(By.id("draggable")), driver.findElement(By.id("droppable"))).build().perform();
 
