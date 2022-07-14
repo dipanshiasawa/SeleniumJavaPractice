@@ -20,7 +20,7 @@ public class FrameTest {
 		
 		Actions a = new Actions(driver);
 		a.dragAndDrop(driver.findElement(By.id("draggable")), driver.findElement(By.id("droppable"))).build().perform();
-
+		driver.switchTo().defaultContent();
 	}
 
 }
