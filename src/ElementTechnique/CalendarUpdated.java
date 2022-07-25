@@ -15,10 +15,10 @@ public class CalendarUpdated {
 		WebDriver driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		driver.get("https://www.path2usa.com/travel-companions");
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//April 23
 		
 		driver.findElement(By.xpath("//*[@id='travel_date']")).click();
