@@ -7,11 +7,11 @@ import org.testng.annotations.Test;
 
 import io.opentelemetry.exporter.logging.SystemOutLogExporter;
 
-public class test1 {
+public class FilterStreamExample {
 
 	public static void main(String[] args) {
 		
-//		regular();
+		regular();
 		streamsFilter();
 	}
 	
@@ -69,6 +69,8 @@ public class test1 {
 			
 			//see the sample of only few results
 			names.stream().filter(s->s.length()>4).limit(1).forEach(s->System.out.println(s));
+			
+			
 			
 			
     }
