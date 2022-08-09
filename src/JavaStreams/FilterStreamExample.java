@@ -3,9 +3,6 @@ package JavaStreams;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
-import org.testng.annotations.Test;
-
-import io.opentelemetry.exporter.logging.SystemOutLogExporter;
 
 public class FilterStreamExample {
 
