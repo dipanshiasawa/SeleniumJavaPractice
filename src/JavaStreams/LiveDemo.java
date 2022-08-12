@@ -43,6 +43,35 @@ public class LiveDemo {
 		Assert.assertEquals(sortedList, veggies);
 		
 		
+		//scan the column with getText -> Rice -> print price of Rice
+		List<String> price ;
+		do
+		{
+			List<WebElement> rows = driver.findElements(By.xpath("//tr/td[1]"));
+			price = rows.stream().filter(s->s.getText().contains("Rice")).map(s->getVeggiePrice(s)).collect(Collectors.toList());
+			price.forEach(s->System.out.println(s));
+		
+			if(price.size()<1)
+			{
+				driver.findElement(By.xpath("//a[@aria-label='Next']")).click();
+			}
+		
+		}while(price.size()<1);
+		
+		
+		driver.findElement(By.id("search-field")).sendKeys("Rice");
+		List<WebElement> searchList = driver.findElements(By.xpath("//tr/td[1]"));
+		List<WebElement> filterList = searchList.stream().filter(s->s.getText().contains("W")).collect(Collectors.toList());
+		
+		Assert.assertEquals(searchList, filterList);
+		
+		
+	}
+
+	private static String getVeggiePrice(WebElement s) {
+
+		String priceValue = s.findElement(By.xpath("following-sibling::td[1]")).getText();
+		return priceValue;
 	}
 
 }
