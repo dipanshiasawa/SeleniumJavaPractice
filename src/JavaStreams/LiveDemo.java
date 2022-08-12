@@ -57,6 +57,15 @@ public class LiveDemo {
 			}
 		
 		}while(price.size()<1);
+		
+		
+		driver.findElement(By.id("search-field")).sendKeys("Rice");
+		List<WebElement> searchList = driver.findElements(By.xpath("//tr/td[1]"));
+		List<WebElement> filterList = searchList.stream().filter(s->s.getText().contains("W")).collect(Collectors.toList());
+		
+		Assert.assertEquals(searchList, filterList);
+		
+		
 	}
 
 	private static String getVeggiePrice(WebElement s) {
