@@ -43,10 +43,20 @@ public class LiveDemo {
 		Assert.assertEquals(sortedList, veggies);
 		
 		
-		//scan the column with getText -> Beans -> print price of Beans
-		List<String> price = elementsList.stream().filter(s->s.getText().contains("Beans")).map(s->getVeggiePrice(s)).collect(Collectors.toList());
-		price.forEach(s->System.out.println(s));
+		//scan the column with getText -> Rice -> print price of Rice
+		List<String> price ;
+		do
+		{
+			List<WebElement> rows = driver.findElements(By.xpath("//tr/td[1]"));
+			price = rows.stream().filter(s->s.getText().contains("Rice")).map(s->getVeggiePrice(s)).collect(Collectors.toList());
+			price.forEach(s->System.out.println(s));
 		
+			if(price.size()<1)
+			{
+				driver.findElement(By.xpath("//a[@aria-label='Next']")).click();
+			}
+		
+		}while(price.size()<1);
 	}
 
 	private static String getVeggiePrice(WebElement s) {
