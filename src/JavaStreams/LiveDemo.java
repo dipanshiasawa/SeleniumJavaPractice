@@ -43,6 +43,16 @@ public class LiveDemo {
 		Assert.assertEquals(sortedList, veggies);
 		
 		
+		//scan the column with getText -> Beans -> print price of Beans
+		List<String> price = elementsList.stream().filter(s->s.getText().contains("Beans")).map(s->getVeggiePrice(s)).collect(Collectors.toList());
+		price.forEach(s->System.out.println(s));
+		
+	}
+
+	private static String getVeggiePrice(WebElement s) {
+
+		String priceValue = s.findElement(By.xpath("following-sibling::td[1]")).getText();
+		return priceValue;
 	}
 
 }
