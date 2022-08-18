@@ -19,7 +19,7 @@
     <classes>
       <class name="test.day3">
       	<methods>
-      		<exclude name="MobileloginCarLoan"/>
+      		<exclude name="Mobile.*"/>
       	</methods>
       </class>
     </classes>
