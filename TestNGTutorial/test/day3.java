@@ -1,5 +1,8 @@
 package test;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class day3 {
@@ -22,6 +25,12 @@ public class day3 {
 		System.out.println("mobile signin car");
 	}
 	
+	@BeforeSuite
+	private void beforeSuiteMethod() {
+		System.out.println("Before Suite - Day 3");
+
+	}
+	
 	@Test
 	private void MobilesignoutCarLoan() {
 		//Appium code
@@ -32,5 +41,17 @@ public class day3 {
 	private void LoginAPICarLoan() {
 		//API code
 		System.out.println("api login car");
+	}
+	
+	@BeforeMethod
+	private void beforemethod() {
+		System.out.println("Before every method");
+
+	}
+	
+	@AfterMethod
+	private void aftermethod() {
+		System.out.println("After every method");
+
 	}
 }
