@@ -13,7 +13,7 @@ public class day4 {
 	@Test
 	private void MobileloginHomeLoan() {
 		//Appium code
-		System.out.println("appium login home");
+		System.out.println("mobile login home");
 	}
 	
 	@Test

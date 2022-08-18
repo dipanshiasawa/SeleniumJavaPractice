@@ -13,7 +13,7 @@ public class day3 {
 	@Test
 	private void MobileloginCarLoan() {
 		//Appium code
-		System.out.println("appium login car");
+		System.out.println("mobile login car");
 	}
 	
 	@Test
