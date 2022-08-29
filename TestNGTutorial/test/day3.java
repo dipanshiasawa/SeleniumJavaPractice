@@ -13,7 +13,7 @@ public class day3 {
 		System.out.println("web login car");
 	}
 
-	@Test
+	@Test(groups= {"Smoke"})
 	private void MobileloginCarLoan() {
 		//Appium code
 		System.out.println("mobile login car");
