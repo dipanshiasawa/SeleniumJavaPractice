@@ -37,8 +37,8 @@ public class day3 {
 		System.out.println("mobile signout car");
 	}
 	
-	@Test
-	private void LoginAPICarLoan() {
+	@Test(dependsOnMethods= {"WebloginCarLoan","MobilesigninCarLoan"})
+	private void APICarLoan() {
 		//API code
 		System.out.println("api login car");
 	}
