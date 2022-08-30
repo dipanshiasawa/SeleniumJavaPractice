@@ -19,7 +19,7 @@ public class day3 {
 		System.out.println("mobile login car");
 	}
 	
-	@Test
+	@Test(timeOut=4000)
 	private void MobilesigninCarLoan() {
 		//Appium code
 		System.out.println("mobile signin car");
@@ -31,7 +31,7 @@ public class day3 {
 
 	}
 	
-	@Test
+	@Test(enabled=false)
 	private void MobilesignoutCarLoan() {
 		//Appium code
 		System.out.println("mobile signout car");
