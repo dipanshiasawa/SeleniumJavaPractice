@@ -15,12 +15,12 @@ public class day2 {
 	@BeforeTest
 	public void prerequisite()
 	{
-		System.out.println("I will execute first - Day 2");
+		System.out.println("I will run .... Before Test - Day 2");
 	}
 	
 	@AfterTest
 	private void lastExecution() {
-		System.out.println("I will execute last - Day 2");
+		System.out.println("I will run .... After Test - Day 2");
 
 	}
 }

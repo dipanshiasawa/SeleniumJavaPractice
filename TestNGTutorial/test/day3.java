@@ -27,7 +27,7 @@ public class day3 {
 	
 	@BeforeSuite
 	private void beforeSuiteMethod() {
-		System.out.println("Before Suite - Day 3");
+		System.out.println("I will run .... Before Suite - Day 3");
 
 	}
 	
@@ -45,13 +45,13 @@ public class day3 {
 	
 	@BeforeMethod
 	private void beforemethod() {
-		System.out.println("Before every method");
+		System.out.println("I will run .... Before Method - Day 3");
 
 	}
 	
 	@AfterMethod
 	private void aftermethod() {
-		System.out.println("After every method");
+		System.out.println("I will run .... After Method - Day 3");
 
 	}
 }

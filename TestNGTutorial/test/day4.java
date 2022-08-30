@@ -26,6 +26,6 @@ public class day4 {
 	@BeforeTest
 	public void prerequisite2()
 	{
-		System.out.println("I will execute first - Day 4");
+		System.out.println("I will run .... Before Test - Day 4");
 	}
 }
