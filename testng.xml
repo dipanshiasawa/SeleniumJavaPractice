@@ -6,6 +6,7 @@
 	
 	<test thread-count="5" name="Personal Loan">
 	<parameter name="URL" value="personalloan.com" />
+	<parameter name="API/username" value="12345" />
 		<classes>
 			<class name="test.day3" />
 			<class name="test.day2" />

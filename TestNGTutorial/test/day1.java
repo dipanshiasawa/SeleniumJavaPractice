@@ -32,11 +32,12 @@ public class day1 {
 		System.out.println("Hello World!");
 
 	}
-	@Parameters({"URL"})
+	@Parameters({"URL","API/username"})
 	@Test
-	public void SecondTest(String urlName) {
+	public void SecondTest(String urlName, String key) {
 		System.out.println("bye");
 		System.out.println(urlName);
+		System.out.println(key);
 	}
 	
 	@AfterSuite
