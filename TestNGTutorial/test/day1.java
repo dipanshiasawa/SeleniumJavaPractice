@@ -1,5 +1,6 @@
 package test;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -30,6 +31,7 @@ public class day1 {
 	@Test
 	private void Demo() {
 		System.out.println("Hello World!");
+		Assert.assertTrue(false);
 
 	}
 	@Parameters({"URL","API/username"})
