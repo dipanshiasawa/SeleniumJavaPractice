@@ -15,7 +15,6 @@ public class RelativeLocatorExample {
 		driver.get("https://rahulshettyacademy.com/angularpractice/");
 		
 		WebElement nameEditBox = driver.findElement(By.cssSelector("[name='name']"));
-		
 		System.out.println(driver.findElement(with(By.tagName("label")).above(nameEditBox)).getText());
 		
 		WebElement dateofbirth = driver.findElement(By.cssSelector("[for='dateofBirth']"));
