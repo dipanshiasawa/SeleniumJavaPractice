@@ -16,7 +16,7 @@ public class Listeners implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		System.out.println("I successfully executed Listeners Pass code");
+//		System.out.println("I successfully executed Listeners Pass code");
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class Listeners implements ITestListener {
 		// TODO Auto-generated method stub
 		// screenshot code on failure
 		// response when API is failed
-		System.out.println("I successfully executed Listeners Failed code");
+		System.out.println("I successfully executed Listeners Failed code " + result.getName());
 
 	}
 
